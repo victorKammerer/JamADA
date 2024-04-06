@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct JamADAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SetupView()
+                .toolbar(.hidden)
         }
+        .modelContainer(for: Player.self)
     }
 }

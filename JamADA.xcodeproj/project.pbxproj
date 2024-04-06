@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		A2105A312BC0FB8600FE929C /* JamADAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A302BC0FB8600FE929C /* JamADAApp.swift */; };
-		A2105A332BC0FB8600FE929C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A322BC0FB8600FE929C /* ContentView.swift */; };
+		A2105A332BC0FB8600FE929C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A322BC0FB8600FE929C /* HomeView.swift */; };
 		A2105A352BC0FB8700FE929C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2105A342BC0FB8700FE929C /* Assets.xcassets */; };
 		A2105A392BC0FB8700FE929C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2105A382BC0FB8700FE929C /* Preview Assets.xcassets */; };
+		A2105A442BC1076700FE929C /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A432BC1076700FE929C /* SetupView.swift */; };
+		A2105A472BC107C700FE929C /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A462BC107C700FE929C /* PlayerModel.swift */; };
+		A2105A4C2BC1087000FE929C /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A4B2BC1087000FE929C /* SetupViewModel.swift */; };
+		A2105A4E2BC113D200FE929C /* PlayerNameBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A4D2BC113D200FE929C /* PlayerNameBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A2105A2D2BC0FB8600FE929C /* JamADA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamADA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2105A302BC0FB8600FE929C /* JamADAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamADAApp.swift; sourceTree = "<group>"; };
-		A2105A322BC0FB8600FE929C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A2105A322BC0FB8600FE929C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		A2105A342BC0FB8700FE929C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2105A362BC0FB8700FE929C /* JamADA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JamADA.entitlements; sourceTree = "<group>"; };
 		A2105A382BC0FB8700FE929C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A2105A432BC1076700FE929C /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		A2105A462BC107C700FE929C /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		A2105A4B2BC1087000FE929C /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
+		A2105A4D2BC113D200FE929C /* PlayerNameBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNameBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +60,10 @@
 		A2105A2F2BC0FB8600FE929C /* JamADA */ = {
 			isa = PBXGroup;
 			children = (
-				A2105A302BC0FB8600FE929C /* JamADAApp.swift */,
-				A2105A322BC0FB8600FE929C /* ContentView.swift */,
-				A2105A342BC0FB8700FE929C /* Assets.xcassets */,
+				A2105A482BC1081A00FE929C /* Extensions */,
+				A2105A452BC107AF00FE929C /* Model */,
+				A2105A3F2BC0FEDD00FE929C /* Core */,
+				A2105A402BC1000000FE929C /* Others */,
 				A2105A362BC0FB8700FE929C /* JamADA.entitlements */,
 				A2105A372BC0FB8700FE929C /* Preview Content */,
 			);
@@ -67,6 +76,73 @@
 				A2105A382BC0FB8700FE929C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A2105A3F2BC0FEDD00FE929C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A2105A422BC1075300FE929C /* Setup */,
+				A2105A412BC1064B00FE929C /* Home */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A2105A402BC1000000FE929C /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				A2105A302BC0FB8600FE929C /* JamADAApp.swift */,
+				A2105A342BC0FB8700FE929C /* Assets.xcassets */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		A2105A412BC1064B00FE929C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A2105A322BC0FB8600FE929C /* HomeView.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		A2105A422BC1075300FE929C /* Setup */ = {
+			isa = PBXGroup;
+			children = (
+				A2105A4A2BC1085600FE929C /* ViewModel */,
+				A2105A492BC1085000FE929C /* View */,
+			);
+			name = Setup;
+			sourceTree = "<group>";
+		};
+		A2105A452BC107AF00FE929C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2105A462BC107C700FE929C /* PlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2105A482BC1081A00FE929C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A2105A492BC1085000FE929C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2105A432BC1076700FE929C /* SetupView.swift */,
+				A2105A4D2BC113D200FE929C /* PlayerNameBarView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A2105A4A2BC1085600FE929C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2105A4B2BC1087000FE929C /* SetupViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2105A332BC0FB8600FE929C /* ContentView.swift in Sources */,
+				A2105A332BC0FB8600FE929C /* HomeView.swift in Sources */,
+				A2105A442BC1076700FE929C /* SetupView.swift in Sources */,
+				A2105A4E2BC113D200FE929C /* PlayerNameBarView.swift in Sources */,
+				A2105A472BC107C700FE929C /* PlayerModel.swift in Sources */,
+				A2105A4C2BC1087000FE929C /* SetupViewModel.swift in Sources */,
 				A2105A312BC0FB8600FE929C /* JamADAApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = JamADA/JamADA.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JamADA/Preview Content\"";
@@ -305,6 +386,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = JamADA/JamADA.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JamADA/Preview Content\"";
