@@ -12,7 +12,7 @@ import SwiftData
 struct JamADAApp: App {
     var body: some Scene {
         WindowGroup {
-            SetupView()
+            HomeView()
                 .toolbar(.hidden)
         }
         .modelContainer(for: Player.self)

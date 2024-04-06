@@ -12,49 +12,90 @@ struct PlayerNameView: View {
     
     @Environment(\.modelContext) private var context
     
-    @State private var step: Int = 0
     @State private var isOver: Bool = false
     
     @StateObject var viewModel = SetupViewModel()
     
     @Query private var items: [Player]
     
-    var body: some View {            
-        Text("Jogador \(viewModel.playerCount)")
-            .font(.title)
+    @State private var color: Color = .gray
+    
+    var body: some View {
+        Text("Nomeie os jogadores")
+            .font(.system(size: 32, weight: .bold, design: .rounded))
             .padding()
         
-        playerNameBar
+        Text("Jogador \(viewModel.playerCount)")
+            .font(.system(size: 22, weight: .medium, design: .rounded))
         
-        if viewModel.buttonAppearing {
-            Button("NEXT") {
-                print("teste")
+        playerNameBar
+            .padding()
+        
+        Divider()
+            .overlay(Color.primary)
+            .padding(.vertical, 40)
+        
+        HStack {
+            ScrollView(showsIndicators: false) {
+                VStack(alignment: .leading) {
+                    ForEach(items.indices, id: \.self) { index in
+                        Text("\(index + 1)º Jogador(a)")
+                            .font(.system(size: 14, weight: .semibold, design: .rounded))
+                        
+                        Text(items[index].name)
+                            .font(.system(size: 20, weight: .bold, design: .rounded))
+                        
+                        Divider()
+                            .frame(width: 113, height: 1)
+                            .background(Color.black)
+                            .padding(.bottom)
+                    }
+                    .padding(.horizontal)
+                }
+                .padding()
+            }
+            .frame(width: 200) // Fixed width for the ScrollView
+            Spacer()
+        }
+
+        
+        Spacer()
+        
+        NavigationLink(destination: PlayersListView().navigationBarBackButtonHidden(),
+                       isActive: $isOver) {
+            EmptyView()
+        }
+        .hidden()
+        
+        RectangleButtonView(buttonText: "Continuar", textColor: viewModel.buttonAppearing ? nil : Color.theme.gray2,
+                            buttonColor: viewModel.buttonAppearing ? Color.black : Color.theme.gray,
+                            action: {
+            UIView.setAnimationsEnabled(false)
+            if viewModel.buttonAppearing {
                 addItem()
                 viewModel.username = ""
             }
-        }
-        
-        List {
-            ForEach (items) { item in
-                Text(item.name)
-            }
-        }
-        
-        NavigationLink(destination: Text("outra tela"), isActive: $isOver) {
-            EmptyView()
-        }
-        .hidden() // Hide the link, but it still works
-        
+        }, usesSymbol: false)
     }
     
     func addItem() {
         let item = Player(name: viewModel.username)
-        print("item: \(item.name)")
+        print(item.id)
+        print(item.name)
         context.insert(item)
         
         viewModel.incrementPlayerCount()
+        
         if viewModel.isPlayerLimitReached() {
-            isOver = true
+            isOver.toggle()
+        }
+    }
+    
+    func deleteAll() {
+        do {
+            try context.delete(model: Player.self)
+        } catch {
+            print("Failed to clear all data.")
         }
     }
 }

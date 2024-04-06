@@ -8,12 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var nextView: Bool = false
+    
     var body: some View {
-        VStack {
-            Button("start") {
-            }
+        NavigationLink(destination: SetupPlayersView().navigationBarBackButtonHidden(),
+                       isActive: $nextView) {
+            EmptyView()
         }
-        .padding()
+                       .hidden()
+        
+        Button(action: {
+            nextView = true
+        }) {
+            RectangleButtonView(buttonText: "Jogar", textColor: nil,
+                                buttonColor: .black,
+                                action: {
+                UIView.setAnimationsEnabled(false)
+                nextView = true
+            }, usesSymbol: false)
+        }
     }
 }
 

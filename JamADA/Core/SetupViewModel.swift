@@ -11,8 +11,9 @@ import SwiftUI
 class SetupViewModel: ObservableObject {
     
     @Published var username: String = ""
+//    @Published var id: Id =
     @Published var buttonAppearing: Bool = false
-    @Published var numberOfPlayers: Int = 1
+    @Published var numberOfPlayers: Int = 4
     @Published var numberOfRounds: Int = 1
     
     @Published var playerCount: Int = 1
@@ -22,7 +23,6 @@ class SetupViewModel: ObservableObject {
     }
     
     func incrementPlayerCount() {
-        print(playerCount)
         playerCount += 1
     }
         

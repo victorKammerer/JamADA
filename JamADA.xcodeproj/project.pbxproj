@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A70C3122BC12F850075A278 /* SetupViewRefactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70C3112BC12F850075A278 /* SetupViewRefactor.swift */; };
 		6A70C3142BC131D10075A278 /* PlayerNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70C3132BC131D10075A278 /* PlayerNameView.swift */; };
 		A2105A312BC0FB8600FE929C /* JamADAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A302BC0FB8600FE929C /* JamADAApp.swift */; };
 		A2105A332BC0FB8600FE929C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A322BC0FB8600FE929C /* HomeView.swift */; };
 		A2105A352BC0FB8700FE929C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2105A342BC0FB8700FE929C /* Assets.xcassets */; };
 		A2105A392BC0FB8700FE929C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2105A382BC0FB8700FE929C /* Preview Assets.xcassets */; };
-		A2105A442BC1076700FE929C /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A432BC1076700FE929C /* SetupView.swift */; };
+		A2105A442BC1076700FE929C /* SetupPlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A432BC1076700FE929C /* SetupPlayersView.swift */; };
 		A2105A472BC107C700FE929C /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A462BC107C700FE929C /* PlayerModel.swift */; };
 		A2105A4C2BC1087000FE929C /* SetupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A4B2BC1087000FE929C /* SetupViewModel.swift */; };
 		A2105A4E2BC113D200FE929C /* PlayerNameBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A4D2BC113D200FE929C /* PlayerNameBarView.swift */; };
+		A2AB47362BC13E5600C3D2AB /* SetupRoundsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB47352BC13E5600C3D2AB /* SetupRoundsView.swift */; };
+		A2AB47392BC14A9300C3D2AB /* RectangleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB47382BC14A9300C3D2AB /* RectangleButtonView.swift */; };
+		A2AB473B2BC1529F00C3D2AB /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB473A2BC1529F00C3D2AB /* PlayersListView.swift */; };
+		A2AB473D2BC1543600C3D2AB /* NVFlipCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB473C2BC1543600C3D2AB /* NVFlipCardView.swift */; };
+		A2AB473F2BC15D9F00C3D2AB /* ThemeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB473E2BC15D9F00C3D2AB /* ThemeView.swift */; };
+		A2AB47412BC15EEA00C3D2AB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AB47402BC15EEA00C3D2AB /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6A70C3112BC12F850075A278 /* SetupViewRefactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewRefactor.swift; sourceTree = "<group>"; };
 		6A70C3132BC131D10075A278 /* PlayerNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNameView.swift; sourceTree = "<group>"; };
 		A2105A2D2BC0FB8600FE929C /* JamADA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamADA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2105A302BC0FB8600FE929C /* JamADAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamADAApp.swift; sourceTree = "<group>"; };
@@ -28,10 +32,16 @@
 		A2105A342BC0FB8700FE929C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2105A362BC0FB8700FE929C /* JamADA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JamADA.entitlements; sourceTree = "<group>"; };
 		A2105A382BC0FB8700FE929C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A2105A432BC1076700FE929C /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
+		A2105A432BC1076700FE929C /* SetupPlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupPlayersView.swift; sourceTree = "<group>"; };
 		A2105A462BC107C700FE929C /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		A2105A4B2BC1087000FE929C /* SetupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewModel.swift; sourceTree = "<group>"; };
 		A2105A4D2BC113D200FE929C /* PlayerNameBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNameBarView.swift; sourceTree = "<group>"; };
+		A2AB47352BC13E5600C3D2AB /* SetupRoundsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupRoundsView.swift; sourceTree = "<group>"; };
+		A2AB47382BC14A9300C3D2AB /* RectangleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleButtonView.swift; sourceTree = "<group>"; };
+		A2AB473A2BC1529F00C3D2AB /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
+		A2AB473C2BC1543600C3D2AB /* NVFlipCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVFlipCardView.swift; sourceTree = "<group>"; };
+		A2AB473E2BC15D9F00C3D2AB /* ThemeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeView.swift; sourceTree = "<group>"; };
+		A2AB47402BC15EEA00C3D2AB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,7 @@
 		A2105A3F2BC0FEDD00FE929C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A2AB47372BC14A7D00C3D2AB /* Components */,
 				A2105A422BC1075300FE929C /* Setup */,
 				A2105A412BC1064B00FE929C /* Home */,
 			);
@@ -128,6 +139,7 @@
 		A2105A482BC1081A00FE929C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				A2AB47402BC15EEA00C3D2AB /* Color.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -135,9 +147,10 @@
 		A2105A492BC1085000FE929C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A2105A432BC1076700FE929C /* SetupView.swift */,
-				6A70C3112BC12F850075A278 /* SetupViewRefactor.swift */,
+				A2105A432BC1076700FE929C /* SetupPlayersView.swift */,
+				A2AB47352BC13E5600C3D2AB /* SetupRoundsView.swift */,
 				6A70C3132BC131D10075A278 /* PlayerNameView.swift */,
+				A2AB473A2BC1529F00C3D2AB /* PlayersListView.swift */,
 				A2105A4D2BC113D200FE929C /* PlayerNameBarView.swift */,
 			);
 			name = View;
@@ -149,6 +162,16 @@
 				A2105A4B2BC1087000FE929C /* SetupViewModel.swift */,
 			);
 			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2AB47372BC14A7D00C3D2AB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A2AB47382BC14A9300C3D2AB /* RectangleButtonView.swift */,
+				A2AB473C2BC1543600C3D2AB /* NVFlipCardView.swift */,
+				A2AB473E2BC15D9F00C3D2AB /* ThemeView.swift */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,13 +245,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A70C3142BC131D10075A278 /* PlayerNameView.swift in Sources */,
+				A2AB473D2BC1543600C3D2AB /* NVFlipCardView.swift in Sources */,
 				A2105A332BC0FB8600FE929C /* HomeView.swift in Sources */,
-				A2105A442BC1076700FE929C /* SetupView.swift in Sources */,
+				A2105A442BC1076700FE929C /* SetupPlayersView.swift in Sources */,
+				A2AB47412BC15EEA00C3D2AB /* Color.swift in Sources */,
+				A2AB473F2BC15D9F00C3D2AB /* ThemeView.swift in Sources */,
 				A2105A4E2BC113D200FE929C /* PlayerNameBarView.swift in Sources */,
 				A2105A472BC107C700FE929C /* PlayerModel.swift in Sources */,
-				6A70C3122BC12F850075A278 /* SetupViewRefactor.swift in Sources */,
+				A2AB473B2BC1529F00C3D2AB /* PlayersListView.swift in Sources */,
+				A2AB47362BC13E5600C3D2AB /* SetupRoundsView.swift in Sources */,
 				A2105A4C2BC1087000FE929C /* SetupViewModel.swift in Sources */,
 				A2105A312BC0FB8600FE929C /* JamADAApp.swift in Sources */,
+				A2AB47392BC14A9300C3D2AB /* RectangleButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
