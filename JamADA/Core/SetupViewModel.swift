@@ -28,4 +28,16 @@ class SetupViewModel: ObservableObject {
     func isPlayerLimitReached() -> Bool {
         return playerCount >= numberOfPlayers + 1
     }
+    
+    func incrementNumberOfPlayers() {
+        if numberOfPlayers < 7 {
+            numberOfPlayers += 1
+        }
+    }
+        
+    func decrementNumberOfPlayers() {
+        if numberOfPlayers > 4 {
+            numberOfPlayers -= 1
+        }
+    }
 }

@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-extension SetupView {
+extension PlayerNameView {
     
     var playerNameBar: some View {
         TextField(
             "",
             text: $viewModel.username,
-            prompt: Text("Enter your name...")
-                .font(.system(size: 32, weight: .regular, design: .rounded))
+            prompt: Text("Inserir nome")
+                .font(.system(size: 32, weight: .medium, design: .rounded))
             
         )
         .foregroundColor(Color.primary)
