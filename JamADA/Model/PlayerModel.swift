@@ -13,6 +13,7 @@ class Player: Identifiable {
     
     var id: String
     var name: String
+    var card: String?
     
     init(name: String) {
         

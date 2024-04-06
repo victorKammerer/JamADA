@@ -45,7 +45,7 @@ struct PlayersListView: View {
         
         Spacer()
         
-        NavigationLink(destination: PlayersListView().navigationBarBackButtonHidden(),
+        NavigationLink(destination: GameLoadingView(players: items).navigationBarBackButtonHidden(),
                        isActive: $nextView) {
             EmptyView()
         }

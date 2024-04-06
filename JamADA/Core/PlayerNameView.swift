@@ -19,6 +19,8 @@ struct PlayerNameView: View {
     
     var body: some View {
         NavigationStack {  
+            Text("\(viewModel.numberOfPlayers)")
+            Text("\(viewModel.numberOfRounds)")
             Text("Nomeie os jogadores")
                 .font(.system(size: 32, weight: .bold, design: .rounded))
                 .padding()
