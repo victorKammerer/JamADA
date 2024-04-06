@@ -20,7 +20,7 @@ struct HomeView: View {
             .padding()
             
         
-        NavigationLink(destination: SetupPlayersView().navigationBarBackButtonHidden(),
+        NavigationLink(destination: SetupPlayersView(),
                        isActive: $nextView) {
             EmptyView()
         }.hidden()

@@ -59,7 +59,7 @@ struct PlayerNameView: View {
             
             Spacer()
             
-            NavigationLink(destination: PlayersListView().navigationBarBackButtonHidden(),
+            NavigationLink(destination: PlayersListView(viewModel: viewModel),
                            isActive: $isOver) {
                 EmptyView()
             }
@@ -85,7 +85,6 @@ struct PlayerNameView: View {
         context.insert(item)
         
         viewModel.incrementPlayerCount()
-        print(viewModel.numberOfPlayers)
         if viewModel.isPlayerLimitReached() {
             isOver.toggle()
         }

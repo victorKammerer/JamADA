@@ -48,7 +48,7 @@ struct SetupRoundsView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: PlayerNameView().navigationBarBackButtonHidden(),
+                NavigationLink(destination: PlayerNameView(viewModel: viewModel),
                                isActive: $nextView) {
                     
                     EmptyView()

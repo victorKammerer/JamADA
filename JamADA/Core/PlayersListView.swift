@@ -16,6 +16,8 @@ struct PlayersListView: View {
     
     @State private var nextView: Bool = false
     
+    @StateObject var viewModel = SetupViewModel()
+    
     var body: some View {
         Text("Nomeie os jogadores")
             .font(.system(size: 32, weight: .bold, design: .rounded))

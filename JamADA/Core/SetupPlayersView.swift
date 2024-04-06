@@ -47,7 +47,7 @@ struct SetupPlayersView: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: SetupRoundsView().navigationBarBackButtonHidden(), 
+                NavigationLink(destination: SetupRoundsView(viewModel: viewModel),
                                isActive: $nextView) {
                     EmptyView()
                 }.transition(.opacity)
