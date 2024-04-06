@@ -16,17 +16,13 @@ class SetupViewModel: ObservableObject {
     @Published var numberOfRounds: Int = 1
     
     @Published var playerCount: Int = 1
-    
-    func startGame() {
-        // Start the game with the selected number of players and rounds
-        print("Starting game with \(numberOfPlayers) players for \(numberOfRounds) rounds.")
-    }
 
     func buttonAppears() {
         buttonAppearing = !username.isEmpty
     }
     
     func incrementPlayerCount() {
+        print(playerCount)
         playerCount += 1
     }
         

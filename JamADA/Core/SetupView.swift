@@ -36,13 +36,13 @@ struct SetupView: View {
                 .padding()
                 
                 Button("Next") {
-                    viewModel.startGame()
+//                    viewModel.startGame()
                     step += 1
                 }
                 .padding()
             }
             .padding()
-        } else if step == 1{
+        } else if step == 1 {
             
             Text("Jogador \(viewModel.playerCount)")
                 .font(.title)
@@ -53,7 +53,7 @@ struct SetupView: View {
             
             if viewModel.buttonAppearing && !viewModel.isPlayerLimitReached() {
                 Button("NEXT") {
-                    addItem()
+//                    addItem()
                     viewModel.username = ""
                 }
             }
@@ -72,18 +72,21 @@ struct SetupView: View {
         }
     }
     
-    func addItem() {
-        let item = Player(name: viewModel.username)
-        print(item.id)
-        print(item.name)
-        context.insert(item)
-        
-        viewModel.incrementPlayerCount()
-    }
-    
-    func deleteItens(_ item: Player) {
-        context.delete(item)
-    }
+//    func addItem() {
+//        let item = Player(name: viewModel.username)
+//        print(item.id)
+//        print(item.name)
+//        context.insert(item)
+//        
+//        viewModel.incrementPlayerCount()
+//        if viewModel.isPlayerLimitReached() {
+//            step += 1
+//        }
+//    }
+//    
+//    func deleteItens(_ item: Player) {
+//        context.delete(item)
+//    }
 }
 
 

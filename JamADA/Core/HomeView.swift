@@ -11,7 +11,6 @@ struct HomeView: View {
     var body: some View {
         VStack {
             Button("start") {
-                
             }
         }
         .padding()
