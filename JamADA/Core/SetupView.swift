@@ -20,29 +20,84 @@ struct SetupView: View {
     var body: some View {
         if step == 0 {
             VStack () {
+                Text("How many players?")
+                    .font(.system(size: 32, weight: .bold, design: .rounded))
                 
-                Text("Setup Game")
-                    .font(.title)
-                    .padding()
+                Spacer()
                 
-                Stepper(value: $viewModel.numberOfPlayers, in: 1...10) {
-                    Text("Number of Players: \(viewModel.numberOfPlayers)")
+                HStack (alignment: .center){
+                    Button("-") {
+                        if viewModel.numberOfPlayers > 4 {
+                            viewModel.numberOfPlayers -= 1
+                        }
+                    }.foregroundColor(Color.gray)
+                        .font(.system(size: 64, weight: .bold, design: .rounded))
+                        .padding()
+                    
+                    Text("\(viewModel.numberOfPlayers)")
+                        .foregroundColor(Color.primary)
+                        .font(.system(size: 128, weight: .bold, design: .rounded))
+                        .padding()
+                        .multilineTextAlignment(.center)
+                    
+                    
+                    Button("+") {
+                        if viewModel.numberOfPlayers < 7 {
+                            viewModel.numberOfPlayers += 1
+                        }
+                    }.foregroundColor(Color.gray)
+                        .font(.system(size: 64, weight: .bold, design: .rounded))
+                        .padding()
+                    
                 }
-                .padding()
                 
-                Stepper(value: $viewModel.numberOfRounds, in: 1...10) {
-                    Text("Number of Rounds: \(viewModel.numberOfRounds)")
-                }
-                .padding()
+                Spacer()
                 
                 Button("Next") {
-                    viewModel.startGame()
                     step += 1
-                }
-                .padding()
+                }.padding()
             }
             .padding()
-        } else if step == 1{
+        } else if step == 1 {
+            VStack () {
+                Text("How many rounds?")
+                    .font(.system(size: 32, weight: .bold, design: .rounded))
+                
+                Spacer()
+                
+                HStack (alignment: .center){
+                    Button("-") {
+                        if viewModel.numberOfRounds > 1 {
+                            viewModel.numberOfRounds -= 1
+                        }
+                    }.foregroundColor(Color.gray)
+                        .font(.system(size: 64, weight: .bold, design: .rounded))
+                        .padding()
+                    
+                    Text("\(viewModel.numberOfRounds)")
+                        .foregroundColor(Color.primary)
+                        .font(.system(size: 128, weight: .bold, design: .rounded))
+                        .padding()
+                        .multilineTextAlignment(.center)
+                    
+                    Button("+") {
+                        if viewModel.numberOfRounds < 10 {
+                            viewModel.numberOfRounds += 1
+                        }
+                    }.foregroundColor(Color.gray)
+                        .font(.system(size: 64, weight: .bold, design: .rounded))
+                        .padding()
+                    
+                }
+                
+                Spacer()
+                
+                Button("Next") {
+                    step += 1
+                }.padding()
+            }
+            .padding()
+        } else if step == 2 {
             
             Text("Jogador \(viewModel.playerCount)")
                 .font(.title)
@@ -50,23 +105,13 @@ struct SetupView: View {
             
             playerNameBar
             
-            
-            if viewModel.buttonAppearing && !viewModel.isPlayerLimitReached() {
+            if viewModel.buttonAppearing {
                 Button("NEXT") {
                     addItem()
                     viewModel.username = ""
                 }
             }
-//            List {
-//                ForEach (items) { item in
-//                    Text(item.name)
-//                }
-//                .onDelete{ indexes in
-//                    for index in indexes {
-//                        deleteItens(items[index])
-//                    }
-//                }
-//            }
+            
         } else {
             Text("sla porra")
         }
@@ -79,10 +124,10 @@ struct SetupView: View {
         context.insert(item)
         
         viewModel.incrementPlayerCount()
-    }
-    
-    func deleteItens(_ item: Player) {
-        context.delete(item)
+        
+        if viewModel.isPlayerLimitReached() {
+            step += 1
+        }
     }
 }
 

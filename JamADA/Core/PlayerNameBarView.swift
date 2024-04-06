@@ -24,7 +24,6 @@ extension SetupView {
         .multilineTextAlignment(.center)
         .onChange(of: viewModel.username) { _ in
             viewModel.buttonAppears()
-            
         }
     }
 }
