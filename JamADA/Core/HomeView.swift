@@ -11,6 +11,8 @@ struct HomeView: View {
     
     @State private var nextView: Bool = false
     
+    @Environment(\.modelContext) private var context
+    
     var body: some View {
         
         Image(systemName: "theatermasks")
@@ -29,9 +31,20 @@ struct HomeView: View {
                             buttonColor: .black,
                             action: {
             UIView.setAnimationsEnabled(false)
+            deleteAll()
             nextView = true
             print(nextView)
         }, usesSymbol: false)
+        
+        
+    }
+    
+    func deleteAll() {
+        do {
+            try context.delete(model: Player.self)
+        } catch {
+            print("Failed to clear all data.")
+        }
     }
 }
 

@@ -213,6 +213,7 @@
 				6A70C3132BC131D10075A278 /* PlayerNameView.swift */,
 				A2AB473A2BC1529F00C3D2AB /* PlayersListView.swift */,
 				A2105A4D2BC113D200FE929C /* PlayerNameBarView.swift */,
+				6A70C3152BC1EA270075A278 /* PlayerVoteView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -230,6 +231,7 @@
 			children = (
 				A2AB47382BC14A9300C3D2AB /* RectangleButtonView.swift */,
 				A2AB473C2BC1543600C3D2AB /* NVFlipCardView.swift */,
+				6A70C3172BC1EB6D0075A278 /* VoteOptionView.swift */,
 				A2AB473E2BC15D9F00C3D2AB /* ThemeView.swift */,
 			);
 			name = Components;

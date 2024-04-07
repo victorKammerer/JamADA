@@ -11,6 +11,15 @@ struct ThemeView: View {
     
     let buttonText: String
     let icon: String
+    let width: CGFloat
+    let height: CGFloat
+    
+    init(buttonText: String, icon: String, width: CGFloat = 94, height: CGFloat = 34) {
+        self.buttonText = buttonText
+        self.icon = icon
+        self.width = width
+        self.height = height
+    }
     
     var body: some View {
         HStack {
@@ -23,7 +32,7 @@ struct ThemeView: View {
                 .foregroundStyle(.primary)
             
         }
-        .frame(width: 94, height: 34)
+        .frame(width: self.width, height: self.height)
         .background(Color.theme.gray)
         .foregroundStyle(.black)
         .clipShape(RoundedRectangle(cornerRadius: 10))
