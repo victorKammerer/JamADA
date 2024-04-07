@@ -9,12 +9,14 @@ import SwiftUI
 
 struct NVFlipCardView: View {
     
+    let cardName: String
+    let themeName: String
+    
     @ObservedObject var presenter: NVFlipCardPresenter
     
     var body: some View {
         ZStack {
-            Rectangle()
-                .foregroundColor(presenter.isFlipped ? .red : .black)
+            Image(presenter.isFlipped ? "frontCard" : themeName)
                 .cornerRadius(8)
                 .frame(width: 300, height: 450)
                 .shadow(color: .gray, radius: 10)
@@ -23,8 +25,17 @@ struct NVFlipCardView: View {
                 }
                 .rotation3DEffect(.degrees(presenter.isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
                 .animation(.default, value: presenter.isFlipped)
-            Text(presenter.isFlipped ? "Impostor" : "Revele sua carta")
-                .foregroundStyle(presenter.isFlipped ? .black : .white)
+                .overlay(
+                    Text(presenter.isFlipped ? cardName : "")
+                                .font(.system(size: 24, weight: .bold))
+                                .foregroundColor(.black)
+                                .mask(
+                                    Rectangle()
+                                        .frame(width: 300, height: 450)
+                                )
+                        )
+//            Text(presenter.isFlipped ? cardName : "")
+//                .foregroundStyle(presenter.isFlipped ? .black : .white)
         }
     }
 }
@@ -43,5 +54,5 @@ class NVFlipCardPresenter: NVFlipCardPresenterProtocol {
 }
 
 #Preview {
-    NVFlipCardView(presenter: NVFlipCardPresenter())
+    NVFlipCardView(cardName: "Impostor", themeName: "Praia", presenter: NVFlipCardPresenter())
 }

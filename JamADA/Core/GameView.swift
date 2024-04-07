@@ -8,22 +8,20 @@
 import SwiftUI
 
 struct GameView: View {
-    @StateObject private var gameViewModel = GameViewModel(players: [])
+    @StateObject private var gameViewModel = GameViewModel(players: [], theme: "", icon: "")
     
     let players: [Player]
+    let theme: String
     
     var body: some View {
         VStack {
-            Button("Start Game") {
-                gameViewModel.distributeCards()
-            }
+               
             
             Spacer()
             
-            // Display player cards
             ForEach(gameViewModel.players) { player in
                 if let card = player.card {
-                    PlayerCardView(playerName: player.name, card: card)
+                    GameCardsView(playerName: player.name, card: card, theme: gameViewModel.theme, icon: gameViewModel.icon)
                 }
             }
             
@@ -35,22 +33,11 @@ struct GameView: View {
                 gameViewModel.players.append(Player(name: player.name))
                 print("TO AQUI" + player.name)
             }
-        }
-    }
-}
-
-struct PlayerCardView: View {
-    var playerName: String
-    var card: String
-    
-    var body: some View {
-        VStack {
-            Text(playerName)
-            Text(card)
+            gameViewModel.distributeCards()
         }
     }
 }
 
 #Preview {
-    GameView(players: [])
+    GameView(players: [], theme: "")
 }

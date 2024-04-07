@@ -14,7 +14,6 @@ struct Party {
 }
 
 struct GameLoadingView: View {
-    @StateObject private var gameViewModel = GameViewModel(players: [])
     @State private var load = 0.0
     
     let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
@@ -51,7 +50,7 @@ struct GameLoadingView: View {
                     }
             } else {
                 
-                NavigationLink(destination: GameView(players: players).navigationBarBackButtonHidden(),
+                NavigationLink(destination: GameView(players: players, theme: "").navigationBarBackButtonHidden(),
                                isActive: $nextView) {
                     EmptyView()
                 }.transition(.opacity)
