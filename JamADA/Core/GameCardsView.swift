@@ -28,9 +28,6 @@ struct GameCardsView: View {
                 NVFlipCardView(cardName: card, themeName: theme, presenter: flipCardPresenter)
                     .foregroundStyle(.red)
             }
-            RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action: {
-                pos += 1
-            }, usesSymbol: true)
         }
     }
 }

@@ -70,7 +70,8 @@ struct PlayerNameView: View {
                                 action: {
                 UIView.setAnimationsEnabled(false)
                 if viewModel.buttonAppearing {
-                    isOver.toggle()
+                    addItem()
+                    viewModel.username = ""
                 }
             }, usesSymbol: false)
         }.environmentObject(SetupViewModel())
@@ -79,7 +80,6 @@ struct PlayerNameView: View {
     
     func addItem() {
         let item = Player(name: viewModel.username)
-        print(item.id)
         print(item.name)
         context.insert(item)
         

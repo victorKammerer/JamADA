@@ -10,8 +10,17 @@ import SwiftUI
 struct GameView: View {
     @StateObject private var gameViewModel = GameViewModel(players: [], theme: "", icon: "")
     
+    @State private var currentIndex: Int = 0
+    
     let players: [Player]
     let theme: String
+    
+    var currentPlayer: Player? {
+        guard currentIndex < gameViewModel.players.count else {
+            return nil
+        }
+        return gameViewModel.players[currentIndex]
+    }
     
     var body: some View {
         VStack {
@@ -19,11 +28,13 @@ struct GameView: View {
             
             Spacer()
             
-            ForEach(gameViewModel.players) { player in
-                if let card = player.card {
-                    GameCardsView(playerName: player.name, card: card, theme: gameViewModel.theme, icon: gameViewModel.icon)
-                }
+            
+            if let currentPlayer = currentPlayer, let card = currentPlayer.card {
+                GameCardsView(playerName: currentPlayer.name, card: card, theme: gameViewModel.theme, icon: gameViewModel.icon)
             }
+            
+            RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action:  {currentIndex = (currentIndex + 1) % gameViewModel.players.count
+            }, usesSymbol: true)
             
             Spacer()
         }

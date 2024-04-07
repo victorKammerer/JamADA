@@ -30,7 +30,7 @@ class SetupViewModel: ObservableObject {
     }
     
     func incrementNumberOfPlayers() {
-        if numberOfPlayers < 7 {
+        if numberOfPlayers < 6 {
             numberOfPlayers += 1
         }
     }

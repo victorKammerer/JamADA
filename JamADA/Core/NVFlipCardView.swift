@@ -16,7 +16,9 @@ struct NVFlipCardView: View {
     
     var body: some View {
         ZStack {
-            Image(presenter.isFlipped ? "frontCard" : themeName)
+            Image(themeName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
                 .cornerRadius(8)
                 .frame(width: 300, height: 450)
                 .shadow(color: .gray, radius: 10)
@@ -25,17 +27,20 @@ struct NVFlipCardView: View {
                 }
                 .rotation3DEffect(.degrees(presenter.isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0))
                 .animation(.default, value: presenter.isFlipped)
-                .overlay(
-                    Text(presenter.isFlipped ? cardName : "")
-                                .font(.system(size: 24, weight: .bold))
-                                .foregroundColor(.black)
-                                .mask(
-                                    Rectangle()
-                                        .frame(width: 300, height: 450)
-                                )
-                        )
-//            Text(presenter.isFlipped ? cardName : "")
-//                .foregroundStyle(presenter.isFlipped ? .black : .white)
+            
+            Image(cardName)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .cornerRadius(8)
+                .scaleEffect(x: -1, y: 1)
+                .frame(width: 300, height: 450)
+                .shadow(color: .gray, radius: 10)
+                .onTapGesture {
+                    presenter.flipButtonTapped()
+                }
+                .opacity(presenter.isFlipped ? 1 : 0) // Show themeName only when flipped
+                .rotation3DEffect(.degrees(presenter.isFlipped ? 180 : 0), axis: (x: 0, y: 1, z: 0)) // Counteract card rotation
+                .animation(.default, value: presenter.isFlipped)
         }
     }
 }
