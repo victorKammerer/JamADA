@@ -14,7 +14,6 @@ class SetupViewModel: ObservableObject {
     @Published var buttonAppearing: Bool = false
     @Published var numberOfPlayers: Int = 4
     @Published var numberOfRounds: Int = 1
-    
     @Published var playerCount: Int = 1
 
     func buttonAppears() {

@@ -15,6 +15,8 @@ struct RectangleButtonView: View {
     let action: () -> Void
     let usesSymbol: Bool
     
+    @Environment(\.colorScheme) private var colorScheme
+    
     var body: some View {
         HStack {
             
@@ -28,8 +30,8 @@ struct RectangleButtonView: View {
             }
         }
         .frame(width: 153, height: 50)
-        .background(buttonColor ?? Color.black)
-        .foregroundStyle(textColor ?? Color.white)
+        .background(buttonColor ?? (colorScheme == .dark ? Color.white : Color.black))
+        .foregroundStyle(textColor ?? (colorScheme == .dark ? Color.black : Color.white))
         .clipShape(RoundedRectangle(cornerRadius: 14))
         .onTapGesture {
             withAnimation(.easeInOut) {
@@ -40,6 +42,11 @@ struct RectangleButtonView: View {
 }
 
 #Preview {
-    RectangleButtonView(buttonText: "Próximo", textColor: .white, buttonColor: .black, action: {}, usesSymbol: true)
-        .previewLayout(.sizeThatFits)
+    RectangleButtonView(
+        buttonText: "Próximo",
+        textColor: nil,
+        buttonColor: nil,
+        action: {},
+        usesSymbol: true)
+    .previewLayout(.sizeThatFits)
 }

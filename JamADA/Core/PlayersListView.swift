@@ -53,14 +53,14 @@ struct PlayersListView: View {
         }
         .hidden()
         
-        RectangleButtonView(buttonText: "Criar partida", textColor: nil,
-                            buttonColor: .black,
-                            action: {
-            UIView.setAnimationsEnabled(false)
-            nextView = true
-        },
-                            usesSymbol: false)
-        
+        RectangleButtonView(
+            buttonText: "Criar partida",
+            textColor: nil,
+            buttonColor: nil,
+            action: {
+                UIView.setAnimationsEnabled(false)
+                nextView = true
+            }, usesSymbol: false)
     }
 }
 

@@ -18,19 +18,20 @@ struct HomeView: View {
             .aspectRatio(contentMode: .fill)
             .frame(width: 237, height: 237)
             .padding()
-            
         
         NavigationLink(destination: SetupPlayersView(),
                        isActive: $nextView) {
             EmptyView()
         }.hidden()
         
-        RectangleButtonView(buttonText: "Jogar", textColor: nil,
-                            buttonColor: .black,
-                            action: {
-            UIView.setAnimationsEnabled(false)
-            nextView = true
-            print(nextView)
+        RectangleButtonView(
+            buttonText: "Jogar",
+            textColor: nil,
+            buttonColor: nil,
+            action: {
+                UIView.setAnimationsEnabled(false)
+                nextView = true
+                print(nextView)
         }, usesSymbol: false)
     }
 }

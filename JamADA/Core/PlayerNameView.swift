@@ -65,15 +65,17 @@ struct PlayerNameView: View {
             }
                            .hidden()
             
-            RectangleButtonView(buttonText: "Continuar", textColor: viewModel.buttonAppearing ? nil : Color.theme.gray2,
-                                buttonColor: viewModel.buttonAppearing ? Color.black : Color.theme.gray,
-                                action: {
-                UIView.setAnimationsEnabled(false)
-                if viewModel.buttonAppearing {
-                    addItem()
-                    viewModel.username = ""
-                }
-            }, usesSymbol: false)
+            RectangleButtonView(
+                buttonText: "Continuar",
+                textColor: viewModel.buttonAppearing ? nil : Color.theme.gray2,
+                buttonColor: viewModel.buttonAppearing ? nil : Color.theme.gray,
+                action: {
+                    UIView.setAnimationsEnabled(false)
+                    if viewModel.buttonAppearing {
+                        addItem()
+                        viewModel.username = ""
+                    }
+                }, usesSymbol: false)
         }.environmentObject(SetupViewModel())
     }
 
