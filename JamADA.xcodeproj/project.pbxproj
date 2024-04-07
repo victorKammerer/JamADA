@@ -15,6 +15,8 @@
 		A20C2DC82BC1E8A20015064F /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C2DC72BC1E8A20015064F /* CardModel.swift */; };
 		A20C2DCB2BC1EB790015064F /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C2DCA2BC1EB790015064F /* DataManager.swift */; };
 		A20C2DCD2BC200B00015064F /* GameCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20C2DCC2BC200B00015064F /* GameCardsView.swift */; };
+		6A70C3182BC1EB6D0075A278 /* VoteOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70C3172BC1EB6D0075A278 /* VoteOptionView.swift */; };
+		6A70C3162BC1EA270075A278 /* PlayerVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70C3152BC1EA270075A278 /* PlayerVoteView.swift */; };
 		A2105A312BC0FB8600FE929C /* JamADAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A302BC0FB8600FE929C /* JamADAApp.swift */; };
 		A2105A332BC0FB8600FE929C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2105A322BC0FB8600FE929C /* HomeView.swift */; };
 		A2105A352BC0FB8700FE929C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2105A342BC0FB8700FE929C /* Assets.xcassets */; };
@@ -33,13 +35,6 @@
 
 /* Begin PBXFileReference section */
 		6A70C3132BC131D10075A278 /* PlayerNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNameView.swift; sourceTree = "<group>"; };
-		A20C2DBA2BC1C8B10015064F /* PlayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerController.swift; sourceTree = "<group>"; };
-		A20C2DBD2BC1CD250015064F /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		A20C2DC02BC1CD560015064F /* GameLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLoadingView.swift; sourceTree = "<group>"; };
-		A20C2DC32BC1D2870015064F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
-		A20C2DC72BC1E8A20015064F /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
-		A20C2DCA2BC1EB790015064F /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		A20C2DCC2BC200B00015064F /* GameCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameCardsView.swift; sourceTree = "<group>"; };
 		A2105A2D2BC0FB8600FE929C /* JamADA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamADA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2105A302BC0FB8600FE929C /* JamADAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamADAApp.swift; sourceTree = "<group>"; };
 		A2105A322BC0FB8600FE929C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -321,7 +316,6 @@
 				A2105A4E2BC113D200FE929C /* PlayerNameBarView.swift in Sources */,
 				A2105A472BC107C700FE929C /* PlayerModel.swift in Sources */,
 				A2AB473B2BC1529F00C3D2AB /* PlayersListView.swift in Sources */,
-				A20C2DCB2BC1EB790015064F /* DataManager.swift in Sources */,
 				A2AB47362BC13E5600C3D2AB /* SetupRoundsView.swift in Sources */,
 				A20C2DCD2BC200B00015064F /* GameCardsView.swift in Sources */,
 				A2105A4C2BC1087000FE929C /* SetupViewModel.swift in Sources */,
