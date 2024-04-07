@@ -12,10 +12,9 @@ class TimerViewModel: ObservableObject {
     @Published var countFrom: Int   // in seconds
     private var originalCountFrom: Int // Store the original countdown time
     private var playerIndex: Int = 0 // Track current player index
-    var isFirstTime: Bool = true // Flag to track first time start
+    private var isFirstTime: Bool = true // Flag to track first time start
     
-    @Published var displayPlayerName: Bool = false // Track whether to display player's name
-    
+    @Published var showPlayerName: Bool = false // Toggle flag to show player's name or placeholder text
     @Published var currentPlayerName: String = "" // Store the current player's name
     
     private var timer: Timer?
@@ -42,10 +41,8 @@ class TimerViewModel: ObservableObject {
                 self.stopTimer()
             }
             if !self.isFirstTime && self.countFrom % 5 == 0 {
-                self.displayPlayerName = true // Set flag to display player's name
+                self.showPlayerName = true // Set flag to show player's name
                 self.showNextPlayerName()
-            } else {
-                self.displayPlayerName = false // Set flag to not display player's name
             }
         }
     }
@@ -56,13 +53,13 @@ class TimerViewModel: ObservableObject {
         playerIndex = 0
     }
     
-    private func showNextPlayerName() {
+    func showNextPlayerName() {
         guard !players.isEmpty else { return }
         let currentPlayer = players[playerIndex]
         currentPlayerName = currentPlayer.name // Update currentPlayerName with current player's name
         playerIndex = (playerIndex + 1) % players.count
     }
-    
+
     func formattedTime() -> String {
         let minutes = Int(self.countFrom) / 60
         let seconds = Int(self.countFrom) % 60
@@ -71,5 +68,6 @@ class TimerViewModel: ObservableObject {
     }
 
 }
+
 
     

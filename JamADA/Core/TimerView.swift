@@ -23,12 +23,14 @@ struct TimerView: View {
         VStack {
             Spacer()
             
-            if viewModel.isFirstTime {
-                Text("Placeholder Text") // Display placeholder text during the first 15 seconds
-                    .font(.headline)
-            } else if viewModel.displayPlayerName {
-                Text("\(viewModel.currentPlayerName)") // Display player's name during 5-second intervals
-                    .font(.headline)
+            if viewModel.showPlayerName {
+                Text("Hora da espiadinha")
+                    .font(.system(size: 32, weight: .bold, design: .rounded))
+                    .padding()
+            } else {
+                Text("Nas suas posições")
+                    .font(.system(size: 32, weight: .bold, design: .rounded))
+                    .padding()
             }
             
             Text(viewModel.formattedTime())
@@ -55,7 +57,7 @@ struct TimerView: View {
     }
 }
 
-
 #Preview {
     TimerView(players: [], countFrom: 5)
 }
+    

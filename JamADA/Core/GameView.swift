@@ -50,6 +50,7 @@ struct GameView: View {
                     print(currentIndex)
                 }
             }, usesSymbol: true)
+            .padding()
             
                                 
             
