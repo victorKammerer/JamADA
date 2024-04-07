@@ -8,48 +8,54 @@
 import SwiftUI
 
 struct TimerView: View {
-    @StateObject private var viewModel: TimerViewModel = TimerViewModel(countFrom: 15) // Initialize viewModel
-    @State private var title: String = "Nas suas posições!" // Initialize title
-    
-    let countFrom: Int
+    @StateObject private var viewModel: TimerViewModel
     
     let players: [Player]
+    let countFrom: Int
+    
+    init(players: [Player], countFrom: Int) {
+        self.players = players
+        self._viewModel = StateObject(wrappedValue: TimerViewModel(countFrom: countFrom, players: players))
+        self.countFrom = countFrom
+    }
     
     var body: some View {
         VStack {
             Spacer()
             
-            Text(title)
-                .font(.system(size: 32, weight: .bold, design: .rounded))
-                .padding()
-            
-            Spacer()
+            if viewModel.isFirstTime {
+                Text("Placeholder Text") // Display placeholder text during the first 15 seconds
+                    .font(.headline)
+            } else if viewModel.displayPlayerName {
+                Text("\(viewModel.currentPlayerName)") // Display player's name during 5-second intervals
+                    .font(.headline)
+            }
             
             Text(viewModel.formattedTime())
                 .font(.system(size: 96, weight: .heavy, design: .rounded))
             
-            Spacer()
-            
             RectangleButtonView(
-                buttonText: viewModel.timerRunning ? "Parar" : "Iniciar",
+                buttonText: viewModel.timerRunning ? "Stop" : "Start",
                 textColor: nil,
                 buttonColor: nil,
                 action: {
                     viewModel.timerRunning.toggle()
                     if viewModel.timerRunning {
-                        viewModel.startTimer(countFrom: 5)
+                        viewModel.resetTimer()
+                        viewModel.startTimer()
                     } else {
-                        // viewModel.stopTimer()
-                        // do some action or change view
+                        viewModel.stopTimer()
                     }
-                }, usesSymbol: false)
-                .padding()
+                },
+                usesSymbol: false
+            )
             
             Spacer()
         }
     }
 }
 
+
 #Preview {
-    TimerView(countFrom: 15, players: [])
+    TimerView(players: [], countFrom: 5)
 }

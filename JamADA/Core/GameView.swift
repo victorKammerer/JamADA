@@ -34,7 +34,7 @@ struct GameView: View {
                 GameCardsView(playerName: currentPlayer.name, card: card, theme: gameViewModel.theme, icon: gameViewModel.icon)
             }
             
-            NavigationLink(destination: TimerView(countFrom: 15, players: players).navigationBarBackButtonHidden(),
+            NavigationLink(destination: TimerView(players: players, countFrom: 15).navigationBarBackButtonHidden(),
                            isActive: $nextView) {
                 EmptyView()
             }.transition(.opacity)
