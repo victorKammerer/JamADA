@@ -36,7 +36,7 @@ struct SetupPlayersView: View {
                         .padding()
                         .multilineTextAlignment(.center)
                     
-                    
+             
                     Button("+") {
                             viewModel.incrementNumberOfPlayers()
                     }.foregroundColor(Color.gray)
@@ -53,7 +53,7 @@ struct SetupPlayersView: View {
                 }.transition(.opacity)
                     .hidden()
                 
-                RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: Color.black, action: {
+                RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action: {
                     UIView.setAnimationsEnabled(false)
                     nextView = true
                 }, usesSymbol: true)

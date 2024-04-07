@@ -18,7 +18,7 @@ struct PlayerNameView: View {
     @StateObject var viewModel = SetupViewModel()
     
     var body: some View {
-        NavigationStack {  
+        NavigationStack {
             Text("Nomeie os jogadores")
                 .font(.system(size: 32, weight: .bold, design: .rounded))
                 .padding()
@@ -70,8 +70,7 @@ struct PlayerNameView: View {
                                 action: {
                 UIView.setAnimationsEnabled(false)
                 if viewModel.buttonAppearing {
-                    addItem()
-                    viewModel.username = ""
+                    isOver.toggle()
                 }
             }, usesSymbol: false)
         }.environmentObject(SetupViewModel())

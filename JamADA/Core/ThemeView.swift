@@ -20,6 +20,7 @@ struct ThemeView: View {
             
             Image(systemName: icon)
                 .font(.system(size: 16, weight: .semibold, design: .rounded))
+                .foregroundStyle(.primary)
             
         }
         .frame(width: 94, height: 34)
@@ -30,5 +31,5 @@ struct ThemeView: View {
 }
 
 #Preview {
-    ThemeView(buttonText: "Praia", icon: "figure.open.water.swim")
+    ThemeView(buttonText: "Praia", icon: "balloon.2.fill")
 }
