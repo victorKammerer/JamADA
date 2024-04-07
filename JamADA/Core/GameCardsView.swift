@@ -12,22 +12,27 @@ struct GameCardsView: View {
     var card: String
     var theme: String
     var icon: String
-    @State private var pos: Int = 0
     
     @StateObject var flipCardPresenter = NVFlipCardPresenter()
     
     var body: some View {
         VStack {
-            if pos == 0 {
-                ThemeView(buttonText: theme, icon: icon)
-                
-                Text(playerName)
-                    .font(.system(size: 24, weight: .bold, design: .rounded))
-                    .kerning(0.5)
-                
-                NVFlipCardView(cardName: card, themeName: theme, presenter: flipCardPresenter)
-                    .foregroundStyle(.red)
-            }
+            ThemeView(buttonText: theme, icon: icon)
+                .padding()
+            
+            Spacer()
+            
+            Text(playerName)
+                .font(.system(size: 24, weight: .bold, design: .rounded))
+                .kerning(0.5)
+                .padding()
+            
+            
+            NVFlipCardView(cardName: card, themeName: theme, presenter: flipCardPresenter)
+                .foregroundStyle(.red)
+            
+            Spacer()
+            
         }
     }
 }
