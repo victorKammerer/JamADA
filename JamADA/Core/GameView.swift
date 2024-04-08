@@ -10,6 +10,7 @@ import SwiftUI
 struct GameView: View {
     @StateObject private var gameViewModel = GameViewModel(players: [], theme: "", icon: "")
     
+    @State private var nextView: Bool = false
     @State private var currentIndex: Int = 0
     
     let players: [Player]
@@ -33,16 +34,32 @@ struct GameView: View {
                 GameCardsView(playerName: currentPlayer.name, card: card, theme: gameViewModel.theme, icon: gameViewModel.icon)
             }
             
-            RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action:  {currentIndex = (currentIndex + 1) % gameViewModel.players.count
+            NavigationLink(destination: TimerView(players: players, countFrom: 15).navigationBarBackButtonHidden(),
+                           isActive: $nextView) {
+                EmptyView()
+            }.transition(.opacity)
+                .hidden()
+            
+            RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action:  {
+                if currentIndex == (gameViewModel.players.count - 1) {
+                    nextView = true
+                    print(currentIndex)
+                } else {
+                    currentIndex = (currentIndex + 1) % gameViewModel.players.count
+                    print(gameViewModel.players.count)
+                    print(currentIndex)
+                }
             }, usesSymbol: true)
+            .padding()
+            
+                                
             
             Spacer()
-        }
+            }
         .padding()
         .onAppear {
             for player in players {
                 gameViewModel.players.append(Player(name: player.name))
-                print("TO AQUI" + player.name)
             }
             gameViewModel.distributeCards()
         }

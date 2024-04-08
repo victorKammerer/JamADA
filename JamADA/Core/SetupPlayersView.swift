@@ -50,7 +50,7 @@ struct SetupPlayersView: View {
                 NavigationLink(destination: SetupRoundsView(viewModel: viewModel),
                                isActive: $nextView) {
                     EmptyView()
-                }.transition(.opacity)
+                }
                     .hidden()
                 
                 RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action: {
