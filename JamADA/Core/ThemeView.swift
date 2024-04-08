@@ -29,7 +29,7 @@ struct ThemeView: View {
             
             Image(systemName: icon)
                 .font(.system(size: 16, weight: .semibold, design: .rounded))
-                .foregroundStyle(.primary)
+                .foregroundStyle(.black)
             
         }
         .frame(width: self.width, height: self.height)
