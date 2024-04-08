@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A6C2A7F2BC325A7006633D8 /* GameVoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A7E2BC325A7006633D8 /* GameVoteResult.swift */; };
+		6A6C2A832BC3261D006633D8 /* GameVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A822BC3261D006633D8 /* GameVoteView.swift */; };
+		6A6C2A852BC326C2006633D8 /* VoteOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A842BC326C2006633D8 /* VoteOptionView.swift */; };
 		6A70C3142BC131D10075A278 /* PlayerNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70C3132BC131D10075A278 /* PlayerNameView.swift */; };
 		A20C2DBB2BC1C8B10015064F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		A20C2DBE2BC1CD250015064F /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -38,6 +41,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A6C2A7E2BC325A7006633D8 /* GameVoteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVoteResult.swift; sourceTree = "<group>"; };
+		6A6C2A822BC3261D006633D8 /* GameVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVoteView.swift; sourceTree = "<group>"; };
+		6A6C2A842BC326C2006633D8 /* VoteOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOptionView.swift; sourceTree = "<group>"; };
 		6A70C3132BC131D10075A278 /* PlayerNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNameView.swift; sourceTree = "<group>"; };
 		A2105A2D2BC0FB8600FE929C /* JamADA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamADA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2105A302BC0FB8600FE929C /* JamADAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamADAApp.swift; sourceTree = "<group>"; };
@@ -88,7 +94,9 @@
 			isa = PBXGroup;
 			children = (
 				A2751DAD2BC2983800074A68 /* GameLoadingView.swift */,
+				6A6C2A822BC3261D006633D8 /* GameVoteView.swift */,
 				A2751DAF2BC2983800074A68 /* GameView.swift */,
+				6A6C2A7E2BC325A7006633D8 /* GameVoteResult.swift */,
 				A2751DAE2BC2983800074A68 /* GameCardsView.swift */,
 			);
 			name = View;
@@ -242,6 +250,7 @@
 		A2AB47372BC14A7D00C3D2AB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6A6C2A842BC326C2006633D8 /* VoteOptionView.swift */,
 				A2AB47382BC14A9300C3D2AB /* RectangleButtonView.swift */,
 				A2AB473C2BC1543600C3D2AB /* NVFlipCardView.swift */,
 				A2AB473E2BC15D9F00C3D2AB /* ThemeView.swift */,
@@ -327,6 +336,8 @@
 				A2751DB62BC2985300074A68 /* CardModel.swift in Sources */,
 				A2105A442BC1076700FE929C /* SetupPlayersView.swift in Sources */,
 				A2751DB12BC2983800074A68 /* GameCardsView.swift in Sources */,
+				6A6C2A832BC3261D006633D8 /* GameVoteView.swift in Sources */,
+				6A6C2A852BC326C2006633D8 /* VoteOptionView.swift in Sources */,
 				A20C2DC82BC1E8A20015064F /* (null) in Sources */,
 				A20C2DBE2BC1CD250015064F /* (null) in Sources */,
 				A2751DBB2BC2EC5B00074A68 /* TimerView.swift in Sources */,
@@ -336,6 +347,7 @@
 				A2AB47412BC15EEA00C3D2AB /* Color.swift in Sources */,
 				A2AB473F2BC15D9F00C3D2AB /* ThemeView.swift in Sources */,
 				A2751DBD2BC2EC6C00074A68 /* TimerViewModel.swift in Sources */,
+				6A6C2A7F2BC325A7006633D8 /* GameVoteResult.swift in Sources */,
 				A2105A4E2BC113D200FE929C /* PlayerNameBarView.swift in Sources */,
 				A2105A472BC107C700FE929C /* PlayerModel.swift in Sources */,
 				A2AB473B2BC1529F00C3D2AB /* PlayersListView.swift in Sources */,
@@ -475,7 +487,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JamADA/Preview Content\"";
-				DEVELOPMENT_TEAM = C5CA8XQ4HG;
+				DEVELOPMENT_TEAM = N3VF3GUXQY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -494,7 +506,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PennyWhistle.JamADA;
+				PRODUCT_BUNDLE_IDENTIFIER = SpolinJamADA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -514,7 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"JamADA/Preview Content\"";
-				DEVELOPMENT_TEAM = C5CA8XQ4HG;
+				DEVELOPMENT_TEAM = N3VF3GUXQY;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -533,7 +545,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PennyWhistle.JamADA;
+				PRODUCT_BUNDLE_IDENTIFIER = SpolinJamADA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
