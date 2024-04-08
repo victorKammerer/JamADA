@@ -41,7 +41,7 @@ struct GameLoadingView: View {
             
             if load < 100 {
                 ProgressView("", value: load, total: 100)
-                    .tint(.black)
+                    .tint(.secondary)
                     .frame(width: 270)
                     .onReceive(timer) { _ in
                         if load < 100 {
