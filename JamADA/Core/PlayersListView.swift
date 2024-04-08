@@ -37,7 +37,7 @@ struct PlayersListView: View {
                         
                         Divider()
                             .frame(width: 113, height: 1)
-                            .overlay(.black)
+                            .overlay(.secondary)
                             .padding(.bottom)
                     }.padding(.horizontal)
                 }.padding()
@@ -54,7 +54,7 @@ struct PlayersListView: View {
         .hidden()
         
         RectangleButtonView(buttonText: "Criar partida", textColor: nil,
-                            buttonColor: .black,
+                            buttonColor: nil,
                             action: {
             UIView.setAnimationsEnabled(false)
             nextView = true

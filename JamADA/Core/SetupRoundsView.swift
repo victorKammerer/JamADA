@@ -55,7 +55,7 @@ struct SetupRoundsView: View {
                 }
                 .hidden()
                 
-                RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: Color.black, action: {
+                RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action: {
                     UIView.setAnimationsEnabled(false)
                     nextView = true
                 }, usesSymbol: true)

@@ -28,8 +28,8 @@ struct RectangleButtonView: View {
             }
         }
         .frame(width: 153, height: 50)
-        .background(buttonColor ?? Color.black)
-        .foregroundStyle(textColor ?? Color.white)
+        .background(buttonColor ?? .primary)
+        .foregroundStyle(textColor ?? .accentColor)
         .clipShape(RoundedRectangle(cornerRadius: 14))
         .onTapGesture {
             withAnimation(.easeInOut) {
@@ -40,6 +40,6 @@ struct RectangleButtonView: View {
 }
 
 #Preview {
-    RectangleButtonView(buttonText: "Próximo", textColor: .white, buttonColor: .black, action: {}, usesSymbol: true)
+    RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action: {}, usesSymbol: true)
         .previewLayout(.sizeThatFits)
 }

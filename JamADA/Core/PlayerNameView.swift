@@ -45,7 +45,7 @@ struct PlayerNameView: View {
                             
                             Divider()
                                 .frame(width: 113, height: 1)
-                                .background(Color.black)
+                                .background(Color.secondary)
                                 .padding(.bottom)
                         }
                         .padding(.horizontal)
@@ -66,7 +66,7 @@ struct PlayerNameView: View {
                            .hidden()
             
             RectangleButtonView(buttonText: "Continuar", textColor: viewModel.buttonAppearing ? nil : Color.theme.gray2,
-                                buttonColor: viewModel.buttonAppearing ? Color.black : Color.theme.gray,
+                                buttonColor: viewModel.buttonAppearing ? nil : Color.theme.gray,
                                 action: {
                 UIView.setAnimationsEnabled(false)
                 if viewModel.buttonAppearing {

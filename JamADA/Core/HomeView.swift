@@ -28,7 +28,7 @@ struct HomeView: View {
         }.hidden()
         
         RectangleButtonView(buttonText: "Jogar", textColor: nil,
-                            buttonColor: .black,
+                            buttonColor: nil,
                             action: {
             UIView.setAnimationsEnabled(false)
             deleteAll()
