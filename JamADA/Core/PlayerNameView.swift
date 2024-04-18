@@ -80,7 +80,6 @@ struct PlayerNameView: View {
     
     func addItem() {
         let item = Player(name: viewModel.username)
-        print(item.name)
         context.insert(item)
         
         viewModel.incrementPlayerCount()

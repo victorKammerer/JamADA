@@ -28,7 +28,6 @@ class GameViewModel: ObservableObject {
         let selectedTheme = cardModel.cards[randomThemeIndex]
         theme = selectedTheme.theme
         icon = selectedTheme.icon
-        print(theme)
         
         let numPlayers = players.count
         let impostorIndex = Int.random(in: 0..<numPlayers)
