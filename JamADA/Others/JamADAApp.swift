@@ -10,12 +10,16 @@ import SwiftData
 
 @main
 struct JamADAApp: App {
-    var body: some Scene {
-        WindowGroup {
-            NavigationStack {
-                HomeView()
-            }
-        }
-        .modelContainer(for: Player.self)
+  var body: some Scene {
+    WindowGroup {
+      NavigationStack {
+        HomeView()
+      }
     }
+    .modelContainer(for: Player.self)
+  }
+  
+  init() {
+    print(URL.applicationSupportDirectory.path(percentEncoded: false))
+  }
 }

@@ -11,6 +11,7 @@
 		6A6C2A832BC3261D006633D8 /* GameVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A822BC3261D006633D8 /* GameVoteView.swift */; };
 		6A6C2A852BC326C2006633D8 /* VoteOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A842BC326C2006633D8 /* VoteOptionView.swift */; };
 		6A70C3142BC131D10075A278 /* PlayerNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A70C3132BC131D10075A278 /* PlayerNameView.swift */; };
+		6A79A2D02BD28B7F000322A4 /* GameVoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A79A2CF2BD28B7F000322A4 /* GameVoteViewModel.swift */; };
 		A20C2DBB2BC1C8B10015064F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		A20C2DBE2BC1CD250015064F /* (null) in Sources */ = {isa = PBXBuildFile; };
 		A20C2DC12BC1CD560015064F /* (null) in Sources */ = {isa = PBXBuildFile; };
@@ -45,6 +46,7 @@
 		6A6C2A822BC3261D006633D8 /* GameVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVoteView.swift; sourceTree = "<group>"; };
 		6A6C2A842BC326C2006633D8 /* VoteOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOptionView.swift; sourceTree = "<group>"; };
 		6A70C3132BC131D10075A278 /* PlayerNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNameView.swift; sourceTree = "<group>"; };
+		6A79A2CF2BD28B7F000322A4 /* GameVoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVoteViewModel.swift; sourceTree = "<group>"; };
 		A2105A2D2BC0FB8600FE929C /* JamADA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JamADA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2105A302BC0FB8600FE929C /* JamADAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JamADAApp.swift; sourceTree = "<group>"; };
 		A2105A322BC0FB8600FE929C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				A2751DB32BC2984000074A68 /* GameViewModel.swift */,
+				6A79A2CF2BD28B7F000322A4 /* GameVoteViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				A2105A472BC107C700FE929C /* PlayerModel.swift in Sources */,
 				A2AB473B2BC1529F00C3D2AB /* PlayersListView.swift in Sources */,
 				A2751DB22BC2983800074A68 /* GameView.swift in Sources */,
+				6A79A2D02BD28B7F000322A4 /* GameVoteViewModel.swift in Sources */,
 				A2AB47362BC13E5600C3D2AB /* SetupRoundsView.swift in Sources */,
 				A20C2DCD2BC200B00015064F /* (null) in Sources */,
 				A2105A4C2BC1087000FE929C /* SetupViewModel.swift in Sources */,

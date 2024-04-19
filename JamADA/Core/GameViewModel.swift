@@ -14,13 +14,11 @@ class GameViewModel: ObservableObject {
     @Published var players: [Player]
     @Published var theme: String
     @Published var icon: String
-    @Published var playerTurn: Int
     
     init(players: [Player], theme: String, icon: String) {
         self.players = players
         self.theme = theme
         self.icon = icon
-        self.playerTurn = 0
     }
     
     func distributeCards() {
@@ -28,7 +26,6 @@ class GameViewModel: ObservableObject {
         let selectedTheme = cardModel.cards[randomThemeIndex]
         theme = selectedTheme.theme
         icon = selectedTheme.icon
-        print(theme)
         
         let numPlayers = players.count
         let impostorIndex = Int.random(in: 0..<numPlayers)

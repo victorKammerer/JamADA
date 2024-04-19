@@ -10,14 +10,15 @@ import SwiftData
 
 @Model
 class Player: Identifiable {
-    
-    var id: String
-    var name: String
-    var card: String?
-    
-    init(name: String) {
-        
-        self.id = UUID().uuidString
-        self.name = name
-    }
+  
+  var id: String
+  var name: String
+  var card: String?
+  var voteCount: Int = 0
+  
+  init(name: String, voteCount: Int = 0) {
+    self.id = UUID().uuidString
+    self.name = name
+    self.voteCount = voteCount
+  }
 }
