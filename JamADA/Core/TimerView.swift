@@ -50,7 +50,7 @@ struct TimerView: View {
         usesSymbol: false
       )
       Spacer()
-      NavigationLink(destination: GameVoteView(playerTurnVote: 0, selectedPlayer: nil).navigationBarBackButtonHidden(), isActive: $viewModel.lastPlayer){
+      NavigationLink(destination: GameVoteView(selectedPlayer: nil).navigationBarBackButtonHidden(), isActive: $viewModel.lastPlayer){
         EmptyView()
       }.hidden()
     }

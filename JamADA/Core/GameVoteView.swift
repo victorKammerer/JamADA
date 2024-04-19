@@ -13,19 +13,19 @@ struct GameVoteView: View {
   
   @Query private var players: [Player]
   
-  @State var playerTurnVote: Int
-  
   @State var selectedPlayer: Int?
   
-  @StateObject var gameViewModel = GameViewModel(players: [], theme: "", icon: "")
+  @StateObject var gameVoteViewModel = GameVoteViewModel(players: [], playerTurn: 0)
   
   @State private var nextView: Bool = false
   
   var body: some View {
     VStack(spacing: 24) {
       ThemeView(buttonText: "Votação", icon: "target", width: 116, height: 34)
-      Text("\(playerTurnVote + 1)º Jogador(a)").font(.system(size: 16, weight: .medium, design: .rounded))
-      Text(players[playerTurnVote].name).font(.system(size: 24, weight: .medium, design: .rounded))
+      Text("\(gameVoteViewModel.playerTurn + 1)º Jogador(a)").font(.system(size: 16, weight: .medium, design: .rounded))
+      if(gameVoteViewModel.playerTurn < players.count){
+        Text(players[gameVoteViewModel.playerTurn].name).font(.system(size: 24, weight: .medium, design: .rounded))
+      }
       VStack(spacing: 16) {
         ForEach (players.indices, id: \.self) { index in
           VoteOptionView(playerName: players[index].name, isClicked: selectedPlayer == index, action: {
@@ -40,11 +40,21 @@ struct GameVoteView: View {
         if let selectedPlayer = self.selectedPlayer {
           players[selectedPlayer].voteCount += 1
         }
-        nextView = true
+        if gameVoteViewModel.playerTurn == players.count - 1 {
+          nextView = true
+        } else {
+          gameVoteViewModel.nextPlayerToVote()
+        }
+        self.selectedPlayer = nil
       }, usesSymbol: false)
       Spacer()
     }
-    NavigationLink(destination: players.count > playerTurnVote + 1 ? AnyView(GameVoteView(playerTurnVote: playerTurnVote + 1)) : AnyView(GameVoteResult()), isActive: $nextView) {
+    .onAppear{
+      for player in players {
+        gameVoteViewModel.players.append(Player(name: player.name, voteCount: 0))
+      }
+    }
+    NavigationLink(destination: GameVoteResult(), isActive: $nextView) {
       EmptyView()
     }.hidden()
   }}
@@ -52,5 +62,5 @@ struct GameVoteView: View {
 
 
 #Preview {
-  GameVoteView(playerTurnVote: 0, selectedPlayer: nil)
+  GameVoteView(selectedPlayer: nil)
 }

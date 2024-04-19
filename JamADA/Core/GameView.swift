@@ -48,9 +48,6 @@ struct GameView: View {
         }
       }, usesSymbol: true)
       .padding()
-      
-      
-      
       Spacer()
     }
     .padding()
