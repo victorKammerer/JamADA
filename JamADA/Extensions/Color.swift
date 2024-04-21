@@ -12,12 +12,11 @@ import SwiftUI
 // Quando for usar uma das cores customizadas, utilizar da forma: Color.theme.gray
 
 extension Color {
-    
-    static let theme = ColorTheme()
+  static let theme = ColorTheme()
 }
 
 struct ColorTheme {
-    
-    let gray = Color("gray")
-    let gray2 = Color("gray2")
+  
+  let gray = Color("gray")
+  let gray2 = Color("gray2")
 }

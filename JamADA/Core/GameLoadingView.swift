@@ -33,6 +33,7 @@ struct GameLoadingView: View {
       Text("Mantenha Segredo!")
         .font(.system(size: 24, weight: .semibold, design: .rounded))
         .padding(.vertical, 5)
+      
       Text("Sempre que souber o seu papel na rodada, tente não falar ou ter expressões que possam dar pistas de quem você é!")
         .font(.system(size: 16, weight: .regular, design: .rounded))
         .multilineTextAlignment(.center)
@@ -49,7 +50,6 @@ struct GameLoadingView: View {
             }
           }
       } else {
-        
         NavigationLink(destination: GameView(players: players, theme: "").navigationBarBackButtonHidden(),
                        isActive: $nextView) {
           EmptyView()
