@@ -12,6 +12,7 @@ struct GameView: View {
   
   @State private var nextView: Bool = false
   @State private var currentIndex: Int = 0
+  @State private var revealCard: Bool = false
   
   let players: [Player]
   let theme: String
@@ -25,13 +26,9 @@ struct GameView: View {
   
   var body: some View {
     VStack {
-      
-      
       Spacer()
-      
-      
       if let currentPlayer = currentPlayer, let card = currentPlayer.card {
-        GameCardsView(playerName: currentPlayer.name, card: card, theme: gameViewModel.theme, icon: gameViewModel.icon)
+        GameCardsView(playerName: currentPlayer.name, card: card, theme: gameViewModel.theme, icon: gameViewModel.icon, revealCard: $revealCard)
       }
       
       NavigationLink(destination: TimerView(players: players, countFrom: 15).navigationBarBackButtonHidden(),
@@ -40,15 +37,18 @@ struct GameView: View {
       }.transition(.opacity)
         .hidden()
       
-      RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action:  {
-        if currentIndex == (gameViewModel.players.count - 1) {
-          nextView = true
-        } else {
-          currentIndex = (currentIndex + 1) % gameViewModel.players.count
-        }
-      }, usesSymbol: true)
-      .padding()
-      Spacer()
+      if revealCard {
+        RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action:  {
+          if currentIndex == (gameViewModel.players.count - 1) {
+            nextView = true
+          } else {
+            currentIndex = (currentIndex + 1) % gameViewModel.players.count
+            revealCard = false
+          }
+        }, usesSymbol: true)
+        .padding()
+        Spacer()
+      }
     }
     .padding()
     .onAppear {
