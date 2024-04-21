@@ -57,8 +57,7 @@ struct GameCardsView: View {
   }
 }
 
-#Preview {
-  @State var revealCard: Bool = false
-  GameCardsView(playerName: "Kammerer", card: "Ambulante", theme: "Praia", icon: "figure.open.water.swim", revealCard:
-                  $revealCard)
-}
+//#Preview {
+//  GameCardsView(playerName: "Kammerer", card: "Ambulante", theme: "Praia", icon: "figure.open.water.swim", revealCard:
+//                  $revealCard)
+//}
