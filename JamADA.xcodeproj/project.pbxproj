@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A5C42292BD70BC7004BE717 /* SetupConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C42282BD70BC7004BE717 /* SetupConfig.swift */; };
 		6A6C2A7F2BC325A7006633D8 /* GameVoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A7E2BC325A7006633D8 /* GameVoteResult.swift */; };
 		6A6C2A832BC3261D006633D8 /* GameVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A822BC3261D006633D8 /* GameVoteView.swift */; };
 		6A6C2A852BC326C2006633D8 /* VoteOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A842BC326C2006633D8 /* VoteOptionView.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A5C42282BD70BC7004BE717 /* SetupConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupConfig.swift; sourceTree = "<group>"; };
 		6A6C2A7E2BC325A7006633D8 /* GameVoteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVoteResult.swift; sourceTree = "<group>"; };
 		6A6C2A822BC3261D006633D8 /* GameVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVoteView.swift; sourceTree = "<group>"; };
 		6A6C2A842BC326C2006633D8 /* VoteOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOptionView.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				A2105A4B2BC1087000FE929C /* SetupViewModel.swift */,
+				6A5C42282BD70BC7004BE717 /* SetupConfig.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				A2105A292BC0FB8600FE929C /* Sources */,
 				A2105A2A2BC0FB8600FE929C /* Frameworks */,
 				A2105A2B2BC0FB8600FE929C /* Resources */,
+				6AEB10C42BD5D95300249A73 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -326,12 +330,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6AEB10C42BD5D95300249A73 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A2105A292BC0FB8600FE929C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6A70C3142BC131D10075A278 /* PlayerNameView.swift in Sources */,
+				6A5C42292BD70BC7004BE717 /* SetupConfig.swift in Sources */,
 				A2AB473D2BC1543600C3D2AB /* NVFlipCardView.swift in Sources */,
 				A2105A332BC0FB8600FE929C /* HomeView.swift in Sources */,
 				A2751DB02BC2983800074A68 /* GameLoadingView.swift in Sources */,

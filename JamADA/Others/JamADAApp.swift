@@ -14,7 +14,7 @@ struct JamADAApp: App {
     WindowGroup {
       NavigationStack {
         HomeView()
-      }
+      }.environmentObject(SetupConfig())
     }
     .modelContainer(for: Player.self)
   }

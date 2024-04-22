@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SetupPlayersView: View {
   
-  @StateObject var viewModel = SetupViewModel()
+  @ObservedObject var viewModel = SetupViewModel()
   @State private var nextView: Bool = false
   
   @State var isActive = false

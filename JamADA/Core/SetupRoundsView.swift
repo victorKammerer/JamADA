@@ -9,8 +9,9 @@ import SwiftUI
 
 struct SetupRoundsView: View {
   
-  @StateObject var viewModel = SetupViewModel()
+  @ObservedObject var viewModel = SetupViewModel()
   @State private var nextView: Bool = false
+  @EnvironmentObject var setupConfig: SetupConfig
   
   var body: some View {
     NavigationStack {
@@ -57,6 +58,8 @@ struct SetupRoundsView: View {
         
         RectangleButtonView(buttonText: "Próximo", textColor: nil, buttonColor: nil, action: {
           UIView.setAnimationsEnabled(false)
+          setupConfig.players = viewModel.numberOfPlayers
+          setupConfig.rounds = viewModel.numberOfRounds
           nextView = true
         }, usesSymbol: true)
         .padding()
