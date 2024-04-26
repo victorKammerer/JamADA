@@ -51,7 +51,7 @@ struct PlayersListView: View {
                    isActive: $nextView) {
       EmptyView()
     }
-                   .hidden()
+     .hidden()
     
     RectangleButtonView(buttonText: "Criar partida", textColor: nil,
                         buttonColor: nil,

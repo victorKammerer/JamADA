@@ -32,7 +32,18 @@ struct GameView: View {
       Spacer()
       if let currentPlayer = currentPlayer, let card = currentPlayer.card {
         GameCardsView(playerName: currentPlayer.name, card: card, theme: gameViewModel.theme, icon: gameViewModel.icon, revealCard: $revealCard).onAppear{
-        }
+          for player in players{
+            if(currentPlayer.name == player.name && card == "Impostor"){
+              player.isActualImpersonator = true
+            }
+          }
+        }.onChange(of: currentPlayer.name, {
+          for player in players{
+            if(currentPlayer.name == player.name && card == "Impostor") {
+              player.isActualImpersonator = true
+            }
+          }
+        })
       }
       
       NavigationLink(destination: TimerView(players: players, countFrom: 15).navigationBarBackButtonHidden(),

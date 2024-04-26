@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6A5C42292BD70BC7004BE717 /* SetupConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C42282BD70BC7004BE717 /* SetupConfig.swift */; };
+		6A5C422D2BD86AFA004BE717 /* GameImpersonatorReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C422C2BD86AFA004BE717 /* GameImpersonatorReveal.swift */; };
+		6A5C42352BDC522A004BE717 /* PlayerNameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5C42342BDC522A004BE717 /* PlayerNameViewModel.swift */; };
 		6A6C2A7F2BC325A7006633D8 /* GameVoteResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A7E2BC325A7006633D8 /* GameVoteResult.swift */; };
 		6A6C2A832BC3261D006633D8 /* GameVoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A822BC3261D006633D8 /* GameVoteView.swift */; };
 		6A6C2A852BC326C2006633D8 /* VoteOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6C2A842BC326C2006633D8 /* VoteOptionView.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		6A5C42282BD70BC7004BE717 /* SetupConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupConfig.swift; sourceTree = "<group>"; };
+		6A5C422C2BD86AFA004BE717 /* GameImpersonatorReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameImpersonatorReveal.swift; sourceTree = "<group>"; };
+		6A5C42342BDC522A004BE717 /* PlayerNameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerNameViewModel.swift; sourceTree = "<group>"; };
 		6A6C2A7E2BC325A7006633D8 /* GameVoteResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVoteResult.swift; sourceTree = "<group>"; };
 		6A6C2A822BC3261D006633D8 /* GameVoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameVoteView.swift; sourceTree = "<group>"; };
 		6A6C2A842BC326C2006633D8 /* VoteOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteOptionView.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 				6A6C2A822BC3261D006633D8 /* GameVoteView.swift */,
 				A2751DAF2BC2983800074A68 /* GameView.swift */,
 				6A6C2A7E2BC325A7006633D8 /* GameVoteResult.swift */,
+				6A5C422C2BD86AFA004BE717 /* GameImpersonatorReveal.swift */,
 				A2751DAE2BC2983800074A68 /* GameCardsView.swift */,
 			);
 			name = View;
@@ -224,6 +229,7 @@
 			children = (
 				A2105A4B2BC1087000FE929C /* SetupViewModel.swift */,
 				6A5C42282BD70BC7004BE717 /* SetupConfig.swift */,
+				6A5C42342BDC522A004BE717 /* PlayerNameViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 			files = (
 				6A70C3142BC131D10075A278 /* PlayerNameView.swift in Sources */,
 				6A5C42292BD70BC7004BE717 /* SetupConfig.swift in Sources */,
+				6A5C42352BDC522A004BE717 /* PlayerNameViewModel.swift in Sources */,
 				A2AB473D2BC1543600C3D2AB /* NVFlipCardView.swift in Sources */,
 				A2105A332BC0FB8600FE929C /* HomeView.swift in Sources */,
 				A2751DB02BC2983800074A68 /* GameLoadingView.swift in Sources */,
@@ -374,6 +381,7 @@
 				A20C2DC42BC1D2870015064F /* (null) in Sources */,
 				A2AB47412BC15EEA00C3D2AB /* Color.swift in Sources */,
 				A2AB473F2BC15D9F00C3D2AB /* ThemeView.swift in Sources */,
+				6A5C422D2BD86AFA004BE717 /* GameImpersonatorReveal.swift in Sources */,
 				A2751DBD2BC2EC6C00074A68 /* TimerViewModel.swift in Sources */,
 				6A6C2A7F2BC325A7006633D8 /* GameVoteResult.swift in Sources */,
 				A2105A4E2BC113D200FE929C /* PlayerNameBarView.swift in Sources */,
