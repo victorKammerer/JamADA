@@ -50,7 +50,7 @@ struct GameLoadingView: View {
             }
           }
       } else {
-        NavigationLink(destination: GameView(players: players, theme: "").navigationBarBackButtonHidden(),
+        NavigationLink(destination: GameView(theme: "").navigationBarBackButtonHidden(),
                        isActive: $nextView) {
           EmptyView()
         }.transition(.opacity)

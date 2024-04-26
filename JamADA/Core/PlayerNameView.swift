@@ -87,14 +87,6 @@ struct PlayerNameView: View {
       isOver.toggle()
     }
   }
-  
-  func deleteAll() {
-    do {
-      try context.delete(model: Player.self)
-    } catch {
-      print("Failed to clear all data.")
-    }
-  }
 }
 
 #Preview {
