@@ -21,7 +21,7 @@ struct GameVoteView: View {
   
   var body: some View {
     VStack(spacing: 24) {
-      ThemeView(buttonText: "Votação", icon: "target", width: 116, height: 34)
+      ThemeView(buttonText: "Votação", icon: "target")
       Text("\(gameVoteViewModel.playerTurn + 1)º Jogador(a)").font(.system(size: 16, weight: .medium, design: .rounded))
       if(gameVoteViewModel.playerTurn < players.count){
         Text(players[gameVoteViewModel.playerTurn].name).font(.system(size: 24, weight: .medium, design: .rounded))
@@ -58,8 +58,6 @@ struct GameVoteView: View {
       EmptyView()
     }.hidden()
   }}
-
-
 
 #Preview {
   GameVoteView(selectedPlayer: nil)

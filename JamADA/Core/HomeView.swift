@@ -33,8 +33,6 @@ struct HomeView: View {
       UIView.setAnimationsEnabled(false)
       deleteAll()
       nextView = true    }, usesSymbol: false)
-    
-    
   }
   
   func deleteAll() {

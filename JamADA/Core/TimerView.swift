@@ -22,7 +22,6 @@ struct TimerView: View {
   var body: some View {
     VStack {
       Spacer()
-      
       if viewModel.isFirstTime {
         Text("Cada um no seu lugar!") // Display placeholder text during the first 15 seconds
           .font(.system(size:24, weight: .semibold, design: . rounded))
